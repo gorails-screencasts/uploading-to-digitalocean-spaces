@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171030211438) do
+ActiveRecord::Schema.define(version: 20171030214123) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "published_at"
@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(version: 20171030211438) do
     t.string "action"
     t.integer "notifiable_id"
     t.string "notifiable_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.text "image_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
